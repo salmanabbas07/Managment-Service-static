@@ -1,0 +1,685 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog & Insights - EduRise School Growth Platform</title>
+  <meta name="description" content="Read expert guides on increasing school admissions, digitizing campus management, and implementing STEM curriculum.">
+  
+  <script>
+    if (history.scrollRestoration) {
+      history.scrollRestoration = 'manual';
+    }
+    window.scrollTo(0, 0);
+  </script>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              red: '#e11d48',
+              blue: '#2563eb',
+              navy: '#071524',
+              dark: '#09131f',
+              gold: '#f59e0b',
+              yellow: '#facc15'
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="blog.css">
+</head>
+<body class="bg-white text-slate-800 antialiased selection:bg-rose-600 selection:text-white">
+  <!-- ZOHO STYLE TOP ANNOUNCEMENT RIBBON -->
+  <div class="top-announcement-bar py-2 px-4 text-center">
+    <div class="max-w-7xl mx-auto flex items-center justify-center gap-2 text-xs font-semibold">
+      <span>🏛️ <strong>EduRise Conclave 2026 is here</strong> — hosting 200+ School Leaders & Trustees!</span>
+      <a href="../contact/contact.html" class="text-rose-700 underline font-bold hover:text-rose-900 ml-1">Grab your institutional pass →</a>
+    </div>
+  </div>
+
+  <!-- STICKY NAVBAR -->
+  <header class="sticky top-0 z-50 glass-nav">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-18 py-3">
+        
+        <!-- Logo (Zoho Style Clean Mark) -->
+        <a href="../home/home.html" class="flex items-center gap-2.5">
+          <div class="flex items-center gap-1">
+            <span class="w-3.5 h-7 rounded-sm bg-rose-600 inline-block"></span>
+            <span class="w-3.5 h-7 rounded-sm bg-emerald-600 inline-block"></span>
+            <span class="w-3.5 h-7 rounded-sm bg-blue-600 inline-block"></span>
+            <span class="w-3.5 h-7 rounded-sm bg-amber-500 inline-block"></span>
+          </div>
+          <div class="flex flex-col ml-1">
+            <span class="text-xl font-extrabold tracking-tight text-slate-900 leading-none">EduRise</span>
+            <span class="text-[9px] text-slate-400 font-bold uppercase tracking-wider mt-0.5">School OS</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden lg:flex items-center gap-6 text-sm font-semibold text-slate-700">
+          <a href="../home/home.html" class="hover:text-blue-600 transition-colors px-2 py-1">Home</a>
+          <a href="../about/about.html" class="hover:text-blue-600 transition-colors px-2 py-1">About Us</a>
+          
+          <!-- Services Hover Dropdown -->
+          <div class="relative group">
+            <a href="../services/services.html" class="flex items-center gap-1 px-3 py-1.5 rounded-lg hover:bg-slate-100 hover:text-blue-600 transition-colors text-slate-700">
+              <span>Solutions</span>
+              <svg class="w-3.5 h-3.5 text-slate-400 group-hover:text-blue-600 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </a>
+            <div class="dropdown-menu absolute left-0 top-full pt-1.5 w-64 z-50">
+              <div class="bg-white rounded-2xl shadow-xl border border-slate-100 p-2 space-y-1">
+                <a href="../admission-marketing/admission-marketing.html" class="block px-4 py-2.5 rounded-xl text-sm font-medium text-slate-800 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                  Admission Marketing
+                </a>
+                <a href="../school-website-dev/school-website.html" class="block px-4 py-2.5 rounded-xl text-sm font-medium text-slate-800 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                  School Website Platform
+                </a>
+                <a href="../erp-solutions/erp-solutions.html" class="block px-4 py-2.5 rounded-xl text-sm font-medium text-slate-800 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                  Campus Cloud ERP
+                </a>
+                <a href="../lms-solutions/lms-solutions.html" class="block px-4 py-2.5 rounded-xl text-sm font-medium text-slate-800 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                  LMS & Digital Class
+                </a>
+                <a href="../future-skills-academy/future-skills-academy.html" class="block px-4 py-2.5 rounded-xl text-sm font-medium text-slate-800 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                  Future Skills Academy
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Training Hover Dropdown -->
+          <div class="relative group">
+            <a href="../training/training.html" class="flex items-center gap-1 px-3 py-1.5 rounded-lg hover:bg-slate-100 hover:text-blue-600 transition-colors text-slate-700">
+              <span>Training</span>
+              <svg class="w-3.5 h-3.5 text-slate-400 group-hover:text-blue-600 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7" />
+              </svg>
+            </a>
+            <div class="dropdown-menu absolute left-0 top-full pt-1.5 w-60 z-50">
+              <div class="bg-white rounded-2xl shadow-xl border border-slate-100 p-2 space-y-1">
+                <a href="../training/training.html#ai-training" class="block px-4 py-2.5 rounded-xl text-sm font-medium text-slate-800 hover:bg-blue-50 hover:text-blue-600 transition-colors">AI Training</a>
+                <a href="../training/training.html#robotics-training" class="block px-4 py-2.5 rounded-xl text-sm font-medium text-slate-800 hover:bg-blue-50 hover:text-blue-600 transition-colors">Robotics Training</a>
+                <a href="../training/training.html#web-development" class="block px-4 py-2.5 rounded-xl text-sm font-medium text-slate-800 hover:bg-blue-50 hover:text-blue-600 transition-colors">Web Development</a>
+                <a href="../training/training.html#software-development" class="block px-4 py-2.5 rounded-xl text-sm font-medium text-slate-800 hover:bg-blue-50 hover:text-blue-600 transition-colors">Software Development</a>
+                <a href="../training/training.html#digital-marketing" class="block px-4 py-2.5 rounded-xl text-sm font-medium text-slate-800 hover:bg-blue-50 hover:text-blue-600 transition-colors">Digital Marketing</a>
+                <a href="../training/training.html#graphic-design" class="block px-4 py-2.5 rounded-xl text-sm font-medium text-slate-800 hover:bg-blue-50 hover:text-blue-600 transition-colors">Graphic Design</a>
+                <a href="../training/training.html#video-editing" class="block px-4 py-2.5 rounded-xl text-sm font-medium text-slate-800 hover:bg-blue-50 hover:text-blue-600 transition-colors">Video Editing</a>
+              </div>
+            </div>
+          </div>
+
+          <a href="../case-studies/case-studies.html" class="hover:text-blue-600 transition-colors px-2 py-1">Case Studies</a>
+          <a href="../blog/blog.html" class="text-rose-600 font-bold px-2 py-1">Blog</a>
+          <a href="../contact/contact.html" class="hover:text-blue-600 transition-colors px-2 py-1">Contact</a>
+        </nav>
+
+        <!-- CTA & Language/Sign in -->
+        <div class="flex items-center gap-4">
+          <button type="button" onclick="openSignInModal()" class="hidden md:inline-block text-xs font-semibold text-slate-600 hover:text-slate-900 cursor-pointer">Sign In</button>
+          <button type="button" onclick="openConsultationModal()" class="btn-red px-5 py-2.5 text-xs font-bold uppercase tracking-wider cursor-pointer">
+            Get Started Free
+          </button>
+
+          <input type="checkbox" id="mobile-menu-toggle" class="peer hidden">
+          <label for="mobile-menu-toggle" class="lg:hidden p-2 rounded-md text-slate-700 hover:bg-slate-100 cursor-pointer">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </label>
+        </div>
+      </div>
+
+      <!-- Mobile Drawer -->
+      <div id="mobile-menu-drawer" class="lg:hidden flex flex-col gap-2 pb-5 pt-2 border-t border-slate-200">
+        <a href="../home/home.html" class="px-3 py-2 rounded-md font-medium text-slate-700 hover:bg-slate-50 text-sm">Home</a>
+        <a href="../about/about.html" class="px-3 py-2 rounded-md font-medium text-slate-700 hover:bg-slate-50 text-sm">About Us</a>
+        
+        <div class="py-1 px-3 bg-slate-50 rounded-lg text-xs font-semibold text-slate-700">
+          <span class="text-slate-400 font-bold uppercase block text-[10px] mb-1">Solutions</span>
+          <a href="../admission-marketing/admission-marketing.html" class="block py-1 hover:text-blue-600">Admission Marketing</a>
+          <a href="../school-website-dev/school-website.html" class="block py-1 hover:text-blue-600">School Website</a>
+          <a href="../erp-solutions/erp-solutions.html" class="block py-1 hover:text-blue-600">ERP Solutions</a>
+          <a href="../lms-solutions/lms-solutions.html" class="block py-1 hover:text-blue-600">LMS Solutions</a>
+          <a href="../future-skills-academy/future-skills-academy.html" class="block py-1 hover:text-blue-600">Future Skills Academy</a>
+        </div>
+
+        <div class="py-1 px-3 bg-slate-50 rounded-lg text-xs font-semibold text-slate-700">
+          <span class="text-slate-400 font-bold uppercase block text-[10px] mb-1">Training</span>
+          <a href="../training/training.html#ai-training" class="block py-1 hover:text-blue-600">AI Training</a>
+          <a href="../training/training.html#robotics-training" class="block py-1 hover:text-blue-600">Robotics Training</a>
+          <a href="../training/training.html#web-development" class="block py-1 hover:text-blue-600">Web Development</a>
+          <a href="../training/training.html#software-development" class="block py-1 hover:text-blue-600">Software Development</a>
+          <a href="../training/training.html#digital-marketing" class="block py-1 hover:text-blue-600">Digital Marketing</a>
+          <a href="../training/training.html#graphic-design" class="block py-1 hover:text-blue-600">Graphic Design</a>
+          <a href="../training/training.html#video-editing" class="block py-1 hover:text-blue-600">Video Editing</a>
+        </div>
+
+        <a href="../case-studies/case-studies.html" class="px-3 py-2 rounded-md font-medium text-slate-700 hover:bg-slate-50 text-sm">Case Studies</a>
+        <a href="../blog/blog.html" class="px-3 py-2 rounded-md font-medium text-slate-700 hover:bg-slate-50 text-sm">Blog</a>
+        <a href="../contact/contact.html" class="px-3 py-2 rounded-md font-medium text-slate-700 hover:bg-slate-50 text-sm">Contact</a>
+        <div class="grid grid-cols-2 gap-2 mt-2">
+          <button type="button" onclick="openSignInModal()" class="btn-secondary w-full py-2.5 text-center text-xs font-bold cursor-pointer">Sign In</button>
+          <button type="button" onclick="openConsultationModal()" class="btn-red w-full py-2.5 text-center text-xs font-bold cursor-pointer">Get Started</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- BLOG HERO -->
+  <section class="py-14 sm:py-18 bg-subtle-grid border-b border-slate-200">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <span class="text-xs font-bold text-blue-700 uppercase tracking-wider">Knowledge Hub</span>
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-2 mb-4 leading-tight">
+        Strategies & Insights for Modern School Leaders
+      </h1>
+      <p class="text-base text-slate-600 max-w-2xl mx-auto leading-relaxed">
+        Expert articles on digital admission marketing, cloud ERP operations, and future skills education.
+      </p>
+    </div>
+  </section>
+
+  <!-- FEATURED & ARTICLES LIST -->
+  <section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Featured Guide -->
+      <div class="clean-card p-6 sm:p-8 mb-12 bg-slate-900 text-white">
+        <span class="text-xs font-bold uppercase text-teal-400 bg-teal-950/80 px-2.5 py-1 rounded-md border border-teal-800/60">
+          Featured 2026-27 Playbook
+        </span>
+        <h2 class="text-2xl sm:text-3xl font-extrabold mt-4 mb-3 leading-snug">
+          The 2026 School Admission Blueprint: How Leading Schools Reach 100% Enrollment Before March
+        </h2>
+        <p class="text-xs sm:text-sm text-slate-300 max-w-3xl leading-relaxed mb-6">
+          A step-by-step 90-day execution framework covering Meta hyper-local targeting, Google search intent funnels, WhatsApp response automation, and campus tour conversion optimization.
+        </p>
+        <div class="flex items-center gap-4 text-xs text-slate-400">
+          <span>Read Time: 8 Mins</span>
+          <span>•</span>
+          <span>By EduRise Strategy Team</span>
+        </div>
+      </div>
+
+      <!-- Article Grid -->
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <div class="clean-card p-6 flex flex-col justify-between">
+          <div>
+            <span class="text-[11px] font-bold text-blue-700 uppercase tracking-wider">Admissions</span>
+            <h3 class="font-bold text-slate-900 text-base mt-2 mb-2">
+              Why Traditional Banners & Newspaper Ads Are Failing School Admissions
+            </h3>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              How changing parent search behavior shifted inquiry generation to mobile screens and digital local search.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-slate-100 mt-5 text-[11px] text-slate-400">5 min read</div>
+        </div>
+
+        <div class="clean-card p-6 flex flex-col justify-between">
+          <div>
+            <span class="text-[11px] font-bold text-purple-700 uppercase tracking-wider">Campus ERP</span>
+            <h3 class="font-bold text-slate-900 text-base mt-2 mb-2">
+              5 Critical Warning Signs Your School Has Outgrown Paper Registers
+            </h3>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              From fee reconciliation errors to delayed parent notices — how manual records cost Indian schools lakhs yearly.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-slate-100 mt-5 text-[11px] text-slate-400">4 min read</div>
+        </div>
+
+        <div class="clean-card p-6 flex flex-col justify-between">
+          <div>
+            <span class="text-[11px] font-bold text-emerald-700 uppercase tracking-wider">Future Skills</span>
+            <h3 class="font-bold text-slate-900 text-base mt-2 mb-2">
+              How In-School AI & Robotics Labs Directly Drive Parent Enrollment Choices
+            </h3>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              Why modern parents actively prioritize STEM-enabled institutions and how your school can deliver it at zero capex.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-slate-100 mt-5 text-[11px] text-slate-400">6 min read</div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+    <!-- ZOHO PRE-FOOTER CTA -->
+  <section class="py-16 bg-slate-50 text-center border-t border-slate-200">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-2xl sm:text-4xl font-black text-slate-900 mb-2 tracking-tight">
+        Ready to scale your school?
+      </h2>
+      <p class="text-xs sm:text-sm text-slate-600 mb-6">
+        Let's get your campus modernized today with EduRise.
+      </p>
+      <button type="button" onclick="openConsultationModal()" class="btn-red px-7 py-3 text-xs font-bold uppercase tracking-wider shadow-lg cursor-pointer">
+        Get Started Free →
+      </button>
+    </div>
+  </section>
+
+  <!-- ZOHO-STYLE RICH FOOTER -->
+  <footer class="bg-white text-slate-600 py-16 border-t border-slate-200 text-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 md:grid-cols-5 gap-8 mb-12">
+        
+        <div>
+          <h4 class="font-bold text-slate-900 uppercase tracking-wider mb-4 text-xs">Apps & Solutions</h4>
+          <ul class="space-y-2.5">
+            <li><a href="../admission-marketing/admission-marketing.html" class="hover:text-slate-900 transition-colors">Admission CRM</a></li>
+            <li><a href="../school-website-dev/school-website.html" class="hover:text-slate-900 transition-colors">School Web Portals</a></li>
+            <li><a href="../erp-solutions/erp-solutions.html" class="hover:text-slate-900 transition-colors">Campus Cloud ERP</a></li>
+            <li><a href="../lms-solutions/lms-solutions.html" class="hover:text-slate-900 transition-colors">LMS & Digital Class</a></li>
+            <li><a href="../future-skills-academy/future-skills-academy.html" class="hover:text-slate-900 transition-colors">Future Skills Academy</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-bold text-slate-900 uppercase tracking-wider mb-4 text-xs">Curriculum & STEM</h4>
+          <ul class="space-y-2.5">
+            <li><a href="../training/training.html#ai-training" class="hover:text-slate-900 transition-colors">AI Training & Tools</a></li>
+            <li><a href="../training/training.html#robotics-training" class="hover:text-slate-900 transition-colors">Robotics STEM Labs</a></li>
+            <li><a href="../training/training.html#web-development" class="hover:text-slate-900 transition-colors">Web Development</a></li>
+            <li><a href="../training/training.html#software-development" class="hover:text-slate-900 transition-colors">Software Engineering</a></li>
+            <li><a href="../training/training.html#digital-marketing" class="hover:text-slate-900 transition-colors">Digital Marketing</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-bold text-slate-900 uppercase tracking-wider mb-4 text-xs">Resources</h4>
+          <ul class="space-y-2.5">
+            <li><a href="../case-studies/case-studies.html" class="hover:text-slate-900 transition-colors">Case Studies</a></li>
+            <li><a href="../blog/blog.html" class="hover:text-slate-900 transition-colors">Strategy Blog</a></li>
+            <li><a href="../home/home.html#faq" class="hover:text-slate-900 transition-colors">Knowledge Base</a></li>
+            <li><a href="../contact/contact.html" class="hover:text-slate-900 transition-colors">Growth Audits</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-bold text-slate-900 uppercase tracking-wider mb-4 text-xs">Company</h4>
+          <ul class="space-y-2.5">
+            <li><a href="../about/about.html" class="hover:text-slate-900 transition-colors">About Us</a></li>
+            <li><a href="../about/about.html" class="hover:text-slate-900 transition-colors">Our Story</a></li>
+            <li><a href="../case-studies/case-studies.html" class="hover:text-slate-900 transition-colors">Partner Network</a></li>
+            <li><a href="../contact/contact.html" class="hover:text-slate-900 transition-colors">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-bold text-slate-900 uppercase tracking-wider mb-4 text-xs">Contact Sales Desk</h4>
+          <div class="space-y-2 text-slate-600">
+            <div class="font-bold text-slate-900">Phone Hotline:</div>
+            <div>+91 98765 43210</div>
+            <div>+91 98765 43211</div>
+            <div class="font-bold text-slate-900 pt-2">Email:</div>
+            <div>growth@edurise.edu</div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="pt-8 border-t border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-4 text-slate-500 text-[11px]">
+        <div>© 2026 EduRise Platforms Pvt. Ltd. All Rights Reserved.</div>
+        <div class="flex items-center gap-4">
+          <a href="#" class="hover:underline">Privacy Policy</a>
+          <a href="#" class="hover:underline">Terms of Service</a>
+          <a href="#" class="hover:underline">ISO 9001:2015 Certified</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- SIGN IN PORTAL MODAL -->
+  <div id="signin-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm transition-all" style="display: none;">
+    <div class="relative w-full max-w-md bg-white rounded-2xl shadow-2xl border border-slate-100 overflow-hidden p-6 sm:p-8">
+      
+      <!-- Close Button -->
+      <button type="button" onclick="closeSignInModal()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-700 w-8 h-8 rounded-full flex items-center justify-center hover:bg-slate-100 transition-colors cursor-pointer">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+
+      <!-- Sign-in Header -->
+      <div id="signin-form-view">
+        <div class="flex items-center gap-1 mb-2">
+          <span class="w-2.5 h-5 rounded-sm bg-rose-600 inline-block"></span>
+          <span class="w-2.5 h-5 rounded-sm bg-emerald-600 inline-block"></span>
+          <span class="w-2.5 h-5 rounded-sm bg-blue-600 inline-block"></span>
+          <span class="w-2.5 h-5 rounded-sm bg-amber-500 inline-block"></span>
+          <span class="text-sm font-extrabold text-slate-900 ml-1.5">EduRise Campus OS</span>
+        </div>
+        <h3 class="text-xl font-extrabold text-slate-900">Sign in to your Portal</h3>
+        <p class="text-xs text-slate-500 mb-5">Select your role to access your institutional dashboard.</p>
+        
+        <!-- Role Tabs -->
+        <div class="grid grid-cols-3 gap-1.5 p-1 bg-slate-100 rounded-xl mb-4 text-xs font-semibold text-center">
+          <button type="button" onclick="selectSignInRole('admin', this)" class="signin-role-btn py-1.5 px-2 rounded-lg bg-white shadow-sm text-slate-900 font-bold cursor-pointer transition-all">
+            Admin
+          </button>
+          <button type="button" onclick="selectSignInRole('teacher', this)" class="signin-role-btn py-1.5 px-2 rounded-lg text-slate-600 hover:text-slate-900 cursor-pointer transition-all">
+            Teacher
+          </button>
+          <button type="button" onclick="selectSignInRole('parent', this)" class="signin-role-btn py-1.5 px-2 rounded-lg text-slate-600 hover:text-slate-900 cursor-pointer transition-all">
+            Parent
+          </button>
+        </div>
+
+        <form onsubmit="handleSignInSubmit(event)" class="space-y-3.5">
+          <div>
+            <label id="signin-id-label" class="block text-xs font-bold text-slate-700 mb-1">Institutional Email / User ID <span class="text-rose-500">*</span></label>
+            <input type="text" id="signin-id-input" required placeholder="e.g. principal@dps.edu.in" class="w-full px-3.5 py-2.5 text-xs text-slate-900 rounded-xl border border-slate-200 focus:outline-none focus:border-rose-600 focus:ring-2 focus:ring-rose-100 bg-slate-50/50">
+          </div>
+
+          <div>
+            <div class="flex items-center justify-between mb-1">
+              <label class="block text-xs font-bold text-slate-700">Password <span class="text-rose-500">*</span></label>
+              <a href="#" onclick="alert('Password reset link sent to your registered school phone/email.'); return false;" class="text-[11px] font-semibold text-blue-600 hover:underline">Forgot?</a>
+            </div>
+            <input type="password" required placeholder="••••••••" class="w-full px-3.5 py-2.5 text-xs text-slate-900 rounded-xl border border-slate-200 focus:outline-none focus:border-rose-600 focus:ring-2 focus:ring-rose-100 bg-slate-50/50">
+          </div>
+
+          <div class="flex items-center justify-between pt-1 text-[11px] text-slate-500">
+            <label class="flex items-center gap-1.5 cursor-pointer">
+              <input type="checkbox" checked class="rounded border-slate-300 text-rose-600 focus:ring-rose-500">
+              <span>Remember this device</span>
+            </label>
+            <span class="text-emerald-600 font-semibold flex items-center gap-1">
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+              256-Bit SSL
+            </span>
+          </div>
+
+          <button type="submit" class="w-full btn-red py-3 rounded-xl font-bold text-xs shadow-md hover:shadow-lg transition-all cursor-pointer mt-2">
+            Sign In to Campus Portal →
+          </button>
+        </form>
+
+        <div class="pt-4 mt-4 border-t border-slate-100 text-center text-xs text-slate-500">
+          Don't have an institutional account? 
+          <a href="#" onclick="closeSignInModal(); openConsultationModal(); return false;" class="text-rose-600 font-bold hover:underline ml-1">
+            Onboard Your School →
+          </a>
+        </div>
+      </div>
+
+      <!-- Sign-In Success / Redirection View -->
+      <div id="signin-success-view" class="hidden text-center py-6 space-y-4" style="display: none;">
+        <div class="w-14 h-14 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto">
+          <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+        </div>
+        <h3 class="text-xl font-extrabold text-slate-900">Signed In Successfully!</h3>
+        <p class="text-xs text-slate-600 max-w-xs mx-auto leading-relaxed">
+          Welcome to EduRise Campus OS. Redirecting to your school dashboard...
+        </p>
+        <button type="button" onclick="closeSignInModal()" class="bg-slate-900 text-white px-6 py-2 rounded-xl text-xs font-bold hover:bg-slate-800 transition-colors cursor-pointer">
+          Close
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- QUICK CONSULTATION MODAL -->
+  <div id="consultation-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm transition-all" style="display: none;">
+    <div class="relative w-full max-w-md bg-white rounded-2xl shadow-2xl border border-slate-100 overflow-hidden p-6 sm:p-7">
+      
+      <!-- Close Button -->
+      <button type="button" onclick="closeConsultationModal()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-700 w-8 h-8 rounded-full flex items-center justify-center hover:bg-slate-100 transition-colors cursor-pointer">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+
+      <!-- Form View -->
+      <div id="modal-form-view">
+        <span class="text-[11px] font-bold uppercase tracking-wider text-rose-600">Quick Strategy Call</span>
+        <h3 class="text-xl font-extrabold text-slate-900 mt-1 mb-1">Book Free Consultation</h3>
+        <p class="text-xs text-slate-500 mb-5">Talk directly with our senior school growth specialists.</p>
+        
+        <form onsubmit="handleModalSubmit(event)" class="space-y-3.5">
+          <div>
+            <label class="block text-xs font-bold text-slate-700 mb-1">Your Full Name <span class="text-rose-500">*</span></label>
+            <input type="text" required placeholder="e.g. Dr. Ramesh Sharma" class="w-full px-3.5 py-2.5 text-xs text-slate-900 rounded-xl border border-slate-200 focus:outline-none focus:border-rose-600 focus:ring-2 focus:ring-rose-100 bg-slate-50/50">
+          </div>
+          
+          <div class="grid grid-cols-2 gap-3">
+            <div>
+              <label class="block text-xs font-bold text-slate-700 mb-1">WhatsApp No. <span class="text-rose-500">*</span></label>
+              <input type="tel" required placeholder="+91 98765 43210" class="w-full px-3.5 py-2.5 text-xs text-slate-900 rounded-xl border border-slate-200 focus:outline-none focus:border-rose-600 focus:ring-2 focus:ring-rose-100 bg-slate-50/50">
+            </div>
+            <div>
+              <label class="block text-xs font-bold text-slate-700 mb-1">School & City <span class="text-rose-500">*</span></label>
+              <input type="text" required placeholder="e.g. DPS Pune" class="w-full px-3.5 py-2.5 text-xs text-slate-900 rounded-xl border border-slate-200 focus:outline-none focus:border-rose-600 focus:ring-2 focus:ring-rose-100 bg-slate-50/50">
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-xs font-bold text-slate-700 mb-1">Required Solution</label>
+            <select class="w-full px-3.5 py-2.5 text-xs text-slate-900 rounded-xl border border-slate-200 focus:outline-none focus:border-rose-600 focus:ring-2 focus:ring-rose-100 bg-white">
+              <option>Admission Marketing</option>
+              <option>School Website Development</option>
+              <option>Campus ERP System</option>
+              <option>Modern LMS Platform</option>
+              <option>Future Skills & AI Labs</option>
+              <option>All-in-One Complete Growth Plan</option>
+            </select>
+          </div>
+
+          <button type="submit" class="w-full btn-red py-3 rounded-xl font-bold text-xs shadow-md hover:shadow-lg transition-all cursor-pointer mt-2">
+            Schedule Free Call Now →
+          </button>
+          
+          <p class="text-[11px] text-slate-400 text-center">🔒 100% Confidential. No Spam Guarantee.</p>
+        </form>
+      </div>
+
+      <!-- Success View -->
+      <div id="modal-success-view" class="hidden text-center py-6 space-y-4" style="display: none;">
+        <div class="w-14 h-14 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto">
+          <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+        </div>
+        <h3 class="text-xl font-extrabold text-slate-900">Consultation Scheduled!</h3>
+        <p class="text-xs text-slate-600 max-w-xs mx-auto leading-relaxed">
+          Thank you! Our senior school growth advisor will contact you on WhatsApp/Call within 2 hours.
+        </p>
+        <button type="button" onclick="closeConsultationModal()" class="bg-slate-900 text-white px-6 py-2 rounded-xl text-xs font-bold hover:bg-slate-800 transition-colors cursor-pointer">
+          Close
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    // Consultation Modal Logic
+    function openConsultationModal() {
+      const modal = document.getElementById('consultation-modal');
+      const formView = document.getElementById('modal-form-view');
+      const successView = document.getElementById('modal-success-view');
+      if (modal) {
+        modal.style.display = 'flex';
+        modal.classList.remove('hidden');
+        if (formView) formView.style.display = 'block';
+        if (successView) successView.style.display = 'none';
+      }
+    }
+
+    function closeConsultationModal() {
+      const modal = document.getElementById('consultation-modal');
+      if (modal) {
+        modal.style.display = 'none';
+        modal.classList.add('hidden');
+      }
+    }
+
+    function handleModalSubmit(e) {
+      if (e) e.preventDefault();
+      const formView = document.getElementById('modal-form-view');
+      const successView = document.getElementById('modal-success-view');
+      if (formView && successView) {
+        formView.style.display = 'none';
+        successView.style.display = 'block';
+        successView.classList.remove('hidden');
+      }
+    }
+
+    // Sign In Modal Logic
+    function openSignInModal() {
+      const modal = document.getElementById('signin-modal');
+      const formView = document.getElementById('signin-form-view');
+      const successView = document.getElementById('signin-success-view');
+      if (modal) {
+        modal.style.display = 'flex';
+        modal.classList.remove('hidden');
+        if (formView) formView.style.display = 'block';
+        if (successView) successView.style.display = 'none';
+      }
+    }
+
+    function closeSignInModal() {
+      const modal = document.getElementById('signin-modal');
+      if (modal) {
+        modal.style.display = 'none';
+        modal.classList.add('hidden');
+      }
+    }
+
+    function selectSignInRole(role, btn) {
+      document.querySelectorAll('.signin-role-btn').forEach(b => {
+        b.className = 'signin-role-btn py-1.5 px-2 rounded-lg text-slate-600 hover:text-slate-900 cursor-pointer transition-all';
+      });
+      btn.className = 'signin-role-btn py-1.5 px-2 rounded-lg bg-white shadow-sm text-slate-900 font-bold cursor-pointer transition-all';
+
+      const label = document.getElementById('signin-id-label');
+      const input = document.getElementById('signin-id-input');
+      if (role === 'admin') {
+        if (label) label.innerHTML = 'Institutional Email / Admin ID <span class="text-rose-500">*</span>';
+        if (input) input.placeholder = 'e.g. principal@dps.edu.in';
+      } else if (role === 'teacher') {
+        if (label) label.innerHTML = 'Teacher ID / Registered Mobile <span class="text-rose-500">*</span>';
+        if (input) input.placeholder = 'e.g. faculty.t104@dps.edu.in';
+      } else {
+        if (label) label.innerHTML = 'Student Admission No. / Parent Mobile <span class="text-rose-500">*</span>';
+        if (input) input.placeholder = 'e.g. +91 98765 43210 or ADM-2026';
+      }
+    }
+
+    function handleSignInSubmit(e) {
+      if (e) e.preventDefault();
+      const formView = document.getElementById('signin-form-view');
+      const successView = document.getElementById('signin-success-view');
+      if (formView && successView) {
+        formView.style.display = 'none';
+        successView.style.display = 'block';
+        successView.classList.remove('hidden');
+      }
+    }
+
+    // Smooth FAQ Accordion Logic
+    function toggleFaq(btn) {
+      const item = btn.closest('.faq-item');
+      const content = item.querySelector('.faq-content');
+      const isActive = item.classList.contains('active');
+
+      document.querySelectorAll('.faq-item').forEach(other => {
+        other.classList.remove('active');
+        const otherContent = other.querySelector('.faq-content');
+        if (otherContent) {
+          otherContent.style.maxHeight = '0px';
+          otherContent.style.opacity = '0';
+        }
+      });
+
+      if (!isActive) {
+        item.classList.add('active');
+        content.style.maxHeight = content.scrollHeight + 'px';
+        content.style.opacity = '1';
+      }
+    }
+
+    // Story Slider Logic (if on home page)
+    let currentSlide = 1;
+    const totalSlides = 3;
+
+    function showSlide(index) {
+      for (let i = 1; i <= totalSlides; i++) {
+        const slide = document.getElementById(`slide-${i}`);
+        const ind = document.getElementById(`ind-${i}`);
+        if (slide) slide.classList.remove('active');
+        if (ind) ind.className = 'w-2 h-2 rounded-full bg-slate-700 inline-block transition-colors';
+      }
+
+      const activeSlide = document.getElementById(`slide-${index}`);
+      const activeInd = document.getElementById(`ind-${index}`);
+      if (activeSlide) activeSlide.classList.add('active');
+      if (activeInd) activeInd.className = 'w-2 h-2 rounded-full bg-rose-500 inline-block transition-colors';
+      currentSlide = index;
+    }
+
+    function nextSlide() {
+      let next = currentSlide + 1;
+      if (next > totalSlides) next = 1;
+      showSlide(next);
+    }
+
+    function prevSlide() {
+      let prev = currentSlide - 1;
+      if (prev < 1) prev = totalSlides;
+      showSlide(prev);
+    }
+
+    // Pricing Plan toggle for Services
+    function selectPricingPlan(planNum) {
+      const card1 = document.getElementById('pricing-card-1');
+      const card2 = document.getElementById('pricing-card-2');
+      const tag1 = document.getElementById('plan-tag-1');
+      const tag2 = document.getElementById('plan-tag-2');
+      const price1 = document.getElementById('plan-price-1');
+      const price2 = document.getElementById('plan-price-2');
+      const btn1 = document.getElementById('plan-btn-1');
+      const btn2 = document.getElementById('plan-btn-2');
+
+      if (!card1 || !card2) return;
+
+      if (planNum === 1) {
+        card1.classList.add('active-plan');
+        if (tag1) { tag1.className = 'text-xs font-bold text-blue-700 uppercase transition-colors'; tag1.innerText = 'Step 1 (Selected)'; }
+        if (price1) price1.className = 'text-2xl font-extrabold text-blue-700 my-2 transition-colors';
+        if (btn1) btn1.className = 'btn-red w-full py-2.5 text-xs text-center font-bold rounded-lg cursor-pointer';
+
+        card2.classList.remove('active-plan');
+        if (tag2) { tag2.className = 'text-xs font-bold text-slate-500 uppercase transition-colors'; tag2.innerText = 'Step 2'; }
+        if (price2) price2.className = 'text-2xl font-extrabold text-slate-900 my-2 transition-colors';
+        if (btn2) btn2.className = 'btn-secondary w-full py-2.5 text-xs text-center font-bold rounded-lg cursor-pointer';
+      } else {
+        card2.classList.add('active-plan');
+        if (tag2) { tag2.className = 'text-xs font-bold text-blue-700 uppercase transition-colors'; tag2.innerText = 'Step 2 (Selected)'; }
+        if (price2) price2.className = 'text-2xl font-extrabold text-blue-700 my-2 transition-colors';
+        if (btn2) btn2.className = 'btn-red w-full py-2.5 text-xs text-center font-bold rounded-lg cursor-pointer';
+
+        card1.classList.remove('active-plan');
+        if (tag1) { tag1.className = 'text-xs font-bold text-slate-500 uppercase transition-colors'; tag1.innerText = 'Step 1'; }
+        if (price1) price1.className = 'text-2xl font-extrabold text-slate-900 my-2 transition-colors';
+        if (btn1) btn1.className = 'btn-secondary w-full py-2.5 text-xs text-center font-bold rounded-lg cursor-pointer';
+      }
+    }
+  </script>
+
+</body>
+</html>
