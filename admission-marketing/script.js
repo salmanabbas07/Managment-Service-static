@@ -1,3 +1,11 @@
+// Mobile navigation drawer toggle
+function toggleMobileMenu() {
+  const drawer = document.getElementById('mobile-menu-drawer');
+  if (drawer) {
+    drawer.classList.toggle('open');
+  }
+}
+
 // Scroll restoration
 if (history.scrollRestoration) {
   history.scrollRestoration = 'manual';
