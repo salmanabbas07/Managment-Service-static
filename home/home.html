@@ -6,13 +6,6 @@
   <title>EduRise - The Operating System for Modern Schools</title>
   <meta name="description" content="A unique and powerful software and growth suite to transform Indian schools. Boost admissions, automate campus ERP, and deliver in-school AI/STEM labs.">
   
-  <script>
-    if (history.scrollRestoration) {
-      history.scrollRestoration = 'manual';
-    }
-    window.scrollTo(0, 0);
-  </script>
-
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -39,19 +32,19 @@
   <link rel="stylesheet" href="home.css">
 </head>
 <body class="bg-white text-slate-800 antialiased selection:bg-rose-600 selection:text-white">
-  <!-- ZOHO STYLE TOP ANNOUNCEMENT RIBBON -->
+  <!-- Top announcement ribbon -->
   <div class="top-announcement-bar py-2 px-4 text-center">
     <div class="max-w-7xl mx-auto flex items-center justify-center gap-2 text-xs font-semibold">
       <span>🏛️ <strong>EduRise Conclave 2026 is here</strong> — hosting 200+ School Leaders & Trustees!</span>
       <a href="../contact/contact.html" class="text-rose-700 underline font-bold hover:text-rose-900 ml-1">Grab your institutional pass →</a>
     </div>
   </div>
-  <!-- STICKY NAVBAR -->
+  <!-- Navigation -->
   <header class="sticky top-0 z-50 glass-nav">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-18 py-3">
         
-        <!-- Logo (Zoho Style Clean Mark) -->
+        <!-- Brand logo -->
         <a href="home.html" class="flex items-center gap-2.5">
           <div class="flex items-center gap-1">
             <span class="w-3.5 h-7 rounded-sm bg-rose-600 inline-block"></span>
@@ -65,12 +58,12 @@
           </div>
         </a>
 
-        <!-- Desktop Navigation Links -->
+        <!-- Desktop navigation -->
         <nav class="hidden lg:flex items-center gap-6 text-sm font-semibold text-slate-700">
           <a href="home.html" class="text-rose-600 font-bold px-2 py-1">Home</a>
           <a href="../about/about.html" class="hover:text-blue-600 transition-colors px-2 py-1">About Us</a>
           
-          <!-- Services Hover Dropdown -->
+          <!-- Solutions dropdown -->
           <div class="relative group">
             <a href="../services/services.html" class="flex items-center gap-1 px-3 py-1.5 rounded-lg hover:bg-slate-100 hover:text-blue-600 transition-colors">
               <span>Solutions</span>
@@ -99,7 +92,7 @@
             </div>
           </div>
 
-          <!-- Training Hover Dropdown -->
+          <!-- Training dropdown -->
           <div class="relative group">
             <a href="../training/training.html" class="flex items-center gap-1 px-3 py-1.5 rounded-lg hover:bg-slate-100 hover:text-blue-600 transition-colors">
               <span>Training</span>
@@ -125,7 +118,7 @@
           <a href="../contact/contact.html" class="hover:text-blue-600 transition-colors px-2 py-1">Contact</a>
         </nav>
 
-        <!-- CTA & Language/Sign in -->
+        <!-- Auth & actions -->
         <div class="flex items-center gap-4">
           <button type="button" onclick="openSignInModal()" class="hidden md:inline-block text-xs font-semibold text-slate-600 hover:text-slate-900 cursor-pointer">Sign In</button>
           <button type="button" onclick="openConsultationModal()" class="btn-red px-5 py-2.5 text-xs font-bold uppercase tracking-wider cursor-pointer">
@@ -141,7 +134,7 @@
         </div>
       </div>
 
-      <!-- Mobile Drawer -->
+      <!-- Mobile menu drawer -->
       <div id="mobile-menu-drawer" class="lg:hidden flex flex-col gap-2 pb-5 pt-2 border-t border-slate-200">
         <a href="home.html" class="px-3 py-2 rounded-md font-bold text-rose-600 bg-rose-50 text-sm">Home</a>
         <a href="../about/about.html" class="px-3 py-2 rounded-md font-medium text-slate-700 hover:bg-slate-50 text-sm">About Us</a>
@@ -177,28 +170,321 @@
     </div>
   </header>
 
-  <!-- HERO SECTION (ZOHO CENTERED GRANDEUR) -->
-  <section class="pt-16 pb-12 sm:pt-24 sm:pb-16 bg-white text-center">
-    <div class="max-w-4xl mx-auto px-4">
-      
-      <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-[1.12] mb-5">
-        Your school's future,<br class="hidden sm:inline"> powered by our growth suite
-      </h1>
-
-      <p class="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed mb-8">
-        A unique and powerful software suite to transform the way Indian schools operate. Designed for institutions of all sizes, built by a partner that values student data privacy.
-      </p>
-
-      <div>
-        <button type="button" onclick="openConsultationModal()" class="btn-red px-8 py-3.5 text-sm font-bold tracking-wide uppercase shadow-lg cursor-pointer">
-          Get Started For Free →
-        </button>
-      </div>
-
+      <!-- Hero slider -->
+  <section class="hero-slider-container relative" id="hero-main-slider">
+    
+    <!-- Progress Bar (Auto-slide timer) -->
+    <div class="slider-progress-bar-container">
+      <div id="hero-progress-bar" class="slider-progress-bar"></div>
     </div>
+
+    <!-- Navigation Arrows -->
+    <button type="button" onclick="prevHeroSlide()" class="slider-arrow-btn prev-btn" aria-label="Previous Slide">
+      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7" />
+      </svg>
+    </button>
+    <button type="button" onclick="nextHeroSlide()" class="slider-arrow-btn next-btn" aria-label="Next Slide">
+      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7" />
+      </svg>
+    </button>
+
+    <!-- SLIDE 1: Next-Gen Campus ERP & Unified OS -->
+    <div class="hero-slide active" id="hero-slide-1">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
+        <div class="grid lg:grid-cols-12 gap-10 items-center">
+          
+          <!-- Slide 1 Text Content -->
+          <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+            <div class="hero-slide-badge inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 border border-blue-200 text-blue-700 text-xs font-bold shadow-sm">
+              <span class="w-2 h-2 rounded-full bg-blue-600 animate-ping"></span>
+              <span>Next-Gen Campus ERP & Cloud Operating System</span>
+            </div>
+
+            <h1 class="hero-slide-title text-3xl sm:text-5xl lg:text-6xl font-black text-slate-900 tracking-tight leading-[1.12]">
+              Empower Your School With <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-indigo-600">Smart Cloud ERP</span> & Automated UPI
+            </h1>
+
+            <p class="hero-slide-desc text-sm sm:text-base text-slate-600 leading-relaxed max-w-xl mx-auto lg:mx-0">
+              Transform campus governance. Automate biometric attendance, 1-click WhatsApp fee recovery, exam report cards, and GPS transport tracking — 100% paperless & secure.
+            </p>
+
+            <div class="hero-slide-cta flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-2">
+              <button type="button" onclick="openConsultationModal()" class="btn-red px-7 py-3.5 text-xs font-bold uppercase tracking-wider shadow-lg cursor-pointer">
+                Book Free School Demo →
+              </button>
+              <a href="../erp-solutions/erp-solutions.html" class="btn-secondary px-6 py-3.5 text-xs font-bold uppercase tracking-wider">
+                Explore ERP Features
+              </a>
+            </div>
+
+            <!-- Trust Micro-tags -->
+            <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 text-[11px] font-semibold text-slate-500 pt-2 border-t border-slate-100">
+              <span class="flex items-center gap-1.5"><svg class="w-4 h-4 text-emerald-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg> Zero Setup Hassle</span>
+              <span class="flex items-center gap-1.5"><svg class="w-4 h-4 text-emerald-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg> 256-Bit Bank Encryption</span>
+              <span class="flex items-center gap-1.5"><svg class="w-4 h-4 text-emerald-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg> 150+ Schools Active</span>
+            </div>
+          </div>
+
+          <!-- Slide 1 Visual Card -->
+          <div class="lg:col-span-5 hero-slide-visual">
+            <div class="relative max-w-md mx-auto">
+              <!-- Main Mockup Dashboard Card -->
+              <div class="clean-card p-6 shadow-2xl border-slate-200 bg-white/95 backdrop-blur">
+                <div class="flex items-center justify-between pb-4 mb-4 border-b border-slate-100">
+                  <div class="flex items-center gap-2">
+                    <div class="w-3 h-3 rounded-full bg-emerald-500"></div>
+                    <span class="text-xs font-bold text-slate-800">Campus Live Sync</span>
+                  </div>
+                  <span class="text-[10px] font-bold text-slate-400 uppercase bg-slate-100 px-2 py-0.5 rounded">ERP v4.2</span>
+                </div>
+
+                <!-- Stats Grid inside card -->
+                <div class="grid grid-cols-2 gap-3 mb-4">
+                  <div class="p-3.5 rounded-xl bg-blue-50/70 border border-blue-100">
+                    <div class="text-[10px] font-bold uppercase text-blue-700">Tuition Recovered</div>
+                    <div class="text-xl font-extrabold text-slate-900 mt-0.5">₹14.2 Cr+</div>
+                    <div class="text-[10px] text-emerald-600 font-semibold mt-1">↑ 99.4% on-time</div>
+                  </div>
+                  <div class="p-3.5 rounded-xl bg-emerald-50/70 border border-emerald-100">
+                    <div class="text-[10px] font-bold uppercase text-emerald-700">Attendance Synced</div>
+                    <div class="text-xl font-extrabold text-slate-900 mt-0.5">2,450+</div>
+                    <div class="text-[10px] text-slate-500 font-medium mt-1">Instant SMS/App Alerts</div>
+                  </div>
+                </div>
+
+                <!-- Live Ledger Simulation -->
+                <div class="space-y-2.5 text-xs">
+                  <div class="flex items-center justify-between p-2.5 rounded-lg bg-slate-50 border border-slate-100">
+                    <div class="flex items-center gap-2">
+                      <div class="w-7 h-7 rounded-lg bg-rose-100 text-rose-600 flex items-center justify-center font-bold text-[10px]">UPI</div>
+                      <div>
+                        <div class="font-bold text-slate-900 text-[11px]">Quarter 2 Fee Received</div>
+                        <div class="text-[10px] text-slate-400">Class 9th-A • Aryan Sharma</div>
+                      </div>
+                    </div>
+                    <span class="text-emerald-700 font-bold text-[11px]">+₹18,500</span>
+                  </div>
+
+                  <div class="flex items-center justify-between p-2.5 rounded-lg bg-slate-50 border border-slate-100">
+                    <div class="flex items-center gap-2">
+                      <div class="w-7 h-7 rounded-lg bg-cyan-100 text-cyan-600 flex items-center justify-center font-bold text-[10px]">RFID</div>
+                      <div>
+                        <div class="font-bold text-slate-900 text-[11px]">Bus Entry Gate Logged</div>
+                        <div class="text-[10px] text-slate-400">Route 14 • GPS Active</div>
+                      </div>
+                    </div>
+                    <span class="text-blue-700 font-bold text-[10px] bg-blue-50 px-2 py-0.5 rounded">07:45 AM</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Floating badge 1 -->
+              <div class="absolute -top-4 -right-4 bg-[#071524] text-white p-3 rounded-2xl shadow-xl border border-slate-700 float-badge hidden sm:block">
+                <div class="text-[10px] font-bold uppercase text-teal-400">Automated Uptime</div>
+                <div class="text-base font-extrabold">99.8% SLA</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 2: Admission Growth & Performance Marketing -->
+    <div class="hero-slide" id="hero-slide-2">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
+        <div class="grid lg:grid-cols-12 gap-10 items-center">
+          
+          <!-- Slide 2 Text Content -->
+          <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+            <div class="hero-slide-badge inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-rose-50 border border-rose-200 text-rose-700 text-xs font-bold shadow-sm">
+              <span class="w-2 h-2 rounded-full bg-rose-600 animate-ping"></span>
+              <span>Guaranteed Enrollment Surge for 2026–27 Batch</span>
+            </div>
+
+            <h1 class="hero-slide-title text-3xl sm:text-5xl lg:text-6xl font-black text-slate-900 tracking-tight leading-[1.12]">
+              Scale Student Admissions <span class="text-transparent bg-clip-text bg-gradient-to-r from-rose-600 to-amber-600">By 2.3X</span> With Targeted Marketing
+            </h1>
+
+            <p class="hero-slide-desc text-sm sm:text-base text-slate-600 leading-relaxed max-w-xl mx-auto lg:mx-0">
+              Fill your empty classroom seats. We run hyper-targeted Meta & Google ads, build high-converting CBSE/ICSE admission landing pages, and automate WhatsApp parent nurture.
+            </p>
+
+            <div class="hero-slide-cta flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-2">
+              <button type="button" onclick="openConsultationModal()" class="btn-red px-7 py-3.5 text-xs font-bold uppercase tracking-wider shadow-lg cursor-pointer">
+                Get Free Admission Audit →
+              </button>
+              <a href="../admission-marketing/admission-marketing.html" class="btn-secondary px-6 py-3.5 text-xs font-bold uppercase tracking-wider">
+                View Marketing Plan
+              </a>
+            </div>
+
+            <!-- Trust Micro-tags -->
+            <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 text-[11px] font-semibold text-slate-500 pt-2 border-t border-slate-100">
+              <span class="flex items-center gap-1.5"><svg class="w-4 h-4 text-emerald-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg> Verified Local Leads</span>
+              <span class="flex items-center gap-1.5"><svg class="w-4 h-4 text-emerald-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg> Custom Landing Pages</span>
+              <span class="flex items-center gap-1.5"><svg class="w-4 h-4 text-emerald-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg> CRM Lead Tracking</span>
+            </div>
+          </div>
+
+          <!-- Slide 2 Visual Card -->
+          <div class="lg:col-span-5 hero-slide-visual">
+            <div class="relative max-w-md mx-auto">
+              <div class="clean-card p-6 shadow-2xl border-slate-200 bg-white/95 backdrop-blur">
+                <div class="flex items-center justify-between pb-4 mb-4 border-b border-slate-100">
+                  <span class="text-xs font-bold text-rose-600 uppercase tracking-wider">Live Lead Pipeline</span>
+                  <span class="text-[10px] font-bold text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-full">+230% ROI</span>
+                </div>
+
+                <div class="space-y-3 mb-4">
+                  <div class="p-3.5 rounded-xl bg-gradient-to-r from-rose-50 to-orange-50 border border-rose-100">
+                    <div class="flex items-center justify-between">
+                      <span class="text-xs font-bold text-slate-900">Total Admission Inquiries</span>
+                      <span class="text-xs font-bold text-rose-600">This Month</span>
+                    </div>
+                    <div class="text-3xl font-black text-slate-900 mt-1">428 Verified</div>
+                    <div class="text-[11px] text-slate-500 mt-0.5">Nursery to Grade 11 Inquiries</div>
+                  </div>
+
+                  <div class="grid grid-cols-2 gap-3">
+                    <div class="p-3 rounded-xl bg-slate-50 border border-slate-100 text-center">
+                      <div class="text-[10px] font-bold uppercase text-slate-400">Campus Walk-ins</div>
+                      <div class="text-lg font-black text-slate-900 mt-0.5">142 Tours</div>
+                    </div>
+                    <div class="p-3 rounded-xl bg-slate-50 border border-slate-100 text-center">
+                      <div class="text-[10px] font-bold uppercase text-slate-400">Cost / Lead</div>
+                      <div class="text-lg font-black text-emerald-700 mt-0.5">₹340 avg</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="pt-3 border-t border-slate-100 flex items-center justify-between text-xs text-slate-600">
+                  <span class="font-semibold">Target School Boards:</span>
+                  <div class="flex items-center gap-1.5 font-bold text-[10px]">
+                    <span class="bg-blue-50 text-blue-700 px-2 py-0.5 rounded">CBSE</span>
+                    <span class="bg-purple-50 text-purple-700 px-2 py-0.5 rounded">ICSE</span>
+                    <span class="bg-cyan-50 text-cyan-700 px-2 py-0.5 rounded">IB</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Floating badge 2 -->
+              <div class="absolute -bottom-4 -left-4 bg-[#071524] text-white p-3.5 rounded-2xl shadow-xl border border-slate-700 float-badge-delayed hidden sm:block">
+                <div class="text-[10px] font-bold uppercase text-amber-400">Parent Satisfaction</div>
+                <div class="text-sm font-extrabold">⭐ 4.9/5 Institutional Score</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 3: Future Skills Academy (AI & Robotics Labs) -->
+    <div class="hero-slide" id="hero-slide-3">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
+        <div class="grid lg:grid-cols-12 gap-10 items-center">
+          
+          <!-- Slide 3 Text Content -->
+          <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+            <div class="hero-slide-badge inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-purple-50 border border-purple-200 text-purple-700 text-xs font-bold shadow-sm">
+              <span class="w-2 h-2 rounded-full bg-purple-600 animate-ping"></span>
+              <span>NEP 2020 Aligned Future Skills & STEM Curriculum</span>
+            </div>
+
+            <h1 class="hero-slide-title text-3xl sm:text-5xl lg:text-6xl font-black text-slate-900 tracking-tight leading-[1.12]">
+              Transform Classrooms Into <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-teal-600">AI & Robotics</span> Innovation Labs
+            </h1>
+
+            <p class="hero-slide-desc text-sm sm:text-base text-slate-600 leading-relaxed max-w-xl mx-auto lg:mx-0">
+              Prepare your students for tomorrow's technology careers. We provide certified trainers, hardware robotics kits, AI curriculum, and coding portals directly on your campus — Zero hiring burden.
+            </p>
+
+            <div class="hero-slide-cta flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-2">
+              <button type="button" onclick="openConsultationModal()" class="btn-red px-7 py-3.5 text-xs font-bold uppercase tracking-wider shadow-lg cursor-pointer">
+                Launch AI Lab on Campus →
+              </button>
+              <a href="../training/training.html" class="btn-secondary px-6 py-3.5 text-xs font-bold uppercase tracking-wider">
+                Explore 7 Pillars
+              </a>
+            </div>
+
+            <!-- Trust Micro-tags -->
+            <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 text-[11px] font-semibold text-slate-500 pt-2 border-t border-slate-100">
+              <span class="flex items-center gap-1.5"><svg class="w-4 h-4 text-emerald-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg> Hardware Kits Included</span>
+              <span class="flex items-center gap-1.5"><svg class="w-4 h-4 text-emerald-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg> Certified Master Trainers</span>
+              <span class="flex items-center gap-1.5"><svg class="w-4 h-4 text-emerald-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg> 45,000+ Students Trained</span>
+            </div>
+          </div>
+
+          <!-- Slide 3 Visual Card -->
+          <div class="lg:col-span-5 hero-slide-visual">
+            <div class="relative max-w-md mx-auto">
+              <div class="clean-card p-6 shadow-2xl border-slate-200 bg-white/95 backdrop-blur">
+                <div class="flex items-center justify-between pb-4 mb-4 border-b border-slate-100">
+                  <span class="text-xs font-bold text-purple-700 uppercase tracking-wider">Future Skills Lab Suite</span>
+                  <span class="text-[10px] font-bold text-slate-400 bg-slate-100 px-2 py-0.5 rounded">NEP Compliant</span>
+                </div>
+
+                <div class="grid grid-cols-2 gap-3 mb-4">
+                  <div class="p-3 rounded-xl bg-purple-50 border border-purple-100">
+                    <div class="w-8 h-8 rounded-lg bg-purple-600 text-white flex items-center justify-center font-bold text-xs mb-2">AI</div>
+                    <div class="font-bold text-slate-900 text-xs">AI & Machine Learning</div>
+                    <div class="text-[10px] text-slate-500">Prompting & Neural Models</div>
+                  </div>
+
+                  <div class="p-3 rounded-xl bg-emerald-50 border border-emerald-100">
+                    <div class="w-8 h-8 rounded-lg bg-emerald-600 text-white flex items-center justify-center font-bold text-xs mb-2">ROB</div>
+                    <div class="font-bold text-slate-900 text-xs">Robotics & IoT Kits</div>
+                    <div class="text-[10px] text-slate-500">Arduino & Sensors</div>
+                  </div>
+
+                  <div class="p-3 rounded-xl bg-blue-50 border border-blue-100">
+                    <div class="w-8 h-8 rounded-lg bg-blue-600 text-white flex items-center justify-center font-bold text-xs mb-2">WEB</div>
+                    <div class="font-bold text-slate-900 text-xs">Web & Software Dev</div>
+                    <div class="text-[10px] text-slate-500">HTML, CSS, JS, Python</div>
+                  </div>
+
+                  <div class="p-3 rounded-xl bg-amber-50 border border-amber-100">
+                    <div class="w-8 h-8 rounded-lg bg-amber-600 text-white flex items-center justify-center font-bold text-xs mb-2">EXP</div>
+                    <div class="font-bold text-slate-900 text-xs">Design & Video</div>
+                    <div class="text-[10px] text-slate-500">UI/UX & Digital Media</div>
+                  </div>
+                </div>
+
+                <div class="p-3 rounded-xl bg-slate-900 text-white flex items-center justify-between text-xs">
+                  <div class="flex items-center gap-2">
+                    <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+                    <span class="text-[11px] font-bold">Trainer On-Campus</span>
+                  </div>
+                  <span class="text-teal-300 font-bold text-[10px]">Zero Capex Model</span>
+                </div>
+              </div>
+
+              <!-- Floating badge 3 -->
+              <div class="absolute -top-4 -left-4 bg-[#071524] text-white p-3.5 rounded-2xl shadow-xl border border-slate-700 float-badge hidden sm:block">
+                <div class="text-[10px] font-bold uppercase text-purple-400">Student Certification</div>
+                <div class="text-sm font-extrabold">ISO 9001:2015 Accredited</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Indicator Dots -->
+    <div class="absolute bottom-6 left-1/2 transform -translate-x-1/2 z-30 flex items-center gap-2.5">
+      <button type="button" onclick="showHeroSlide(1)" id="hero-dot-1" class="hero-slider-dot active" aria-label="Go to slide 1"></button>
+      <button type="button" onclick="showHeroSlide(2)" id="hero-dot-2" class="hero-slider-dot" aria-label="Go to slide 2"></button>
+      <button type="button" onclick="showHeroSlide(3)" id="hero-dot-3" class="hero-slider-dot" aria-label="Go to slide 3"></button>
+    </div>
+
   </section>
 
-  <!-- FEATURED APPS SUITE (EXACT ZOHO FEATURED PRODUCTS CONTAINER) -->
+  <!-- Featured solutions -->
   <section class="pb-16 sm:pb-24 bg-white">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       
@@ -304,7 +590,7 @@
     </div>
   </section>
 
-  <!-- ALL-IN-ONE SUITE: ZOHO ONE YELLOW SPLIT BANNER -->
+  <!-- Platform spotlight -->
   <section class="py-12 bg-white">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       
@@ -350,7 +636,7 @@
     </div>
   </section>
 
-  <!-- BRANDS THAT TRUST US (LOGOS) -->
+  <!-- Trust strip -->
   <section class="py-12 bg-white text-center border-b border-slate-100">
     <div class="max-w-6xl mx-auto px-4">
       <span class="text-xs font-bold uppercase tracking-widest text-slate-400 block mb-6">
@@ -373,7 +659,7 @@
     </div>
   </section>
 
-  <!-- INTERACTIVE NARRATIVE SLIDER (ZOHO CAROUSEL WITH < > CONTROLS) -->
+  <!-- Story slider -->
   <section class="py-16 bg-[#071524] text-white relative overflow-hidden">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
       
@@ -441,7 +727,7 @@
     </div>
   </section>
 
-  <!-- CORE VALUES & PRINCIPLES (ZOHO 4-PILLAR CLEAN GRID) -->
+  <!-- Core values -->
   <section class="py-16 sm:py-24 bg-white">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       
@@ -498,7 +784,7 @@
     </div>
   </section>
 
-  <!-- MADE IN INDIA. MADE FOR SCHOOLS. (ZOHO METRICS SECTION) -->
+  <!-- Impact metrics -->
   <section class="py-20 bg-[#071524] text-white text-center">
     <div class="max-w-5xl mx-auto px-4">
       
@@ -535,7 +821,7 @@
     </div>
   </section>
 
-  <!-- FAQ SECTION (SMOOTH ACCORDION) -->
+  <!-- FAQ accordion -->
   <section class="py-16 sm:py-20 bg-white border-t border-slate-200">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
       
@@ -641,7 +927,7 @@
     </div>
   </section>
 
-  <!-- ZOHO PRE-FOOTER CTA -->
+  <!-- Pre-footer CTA -->
   <section class="py-20 bg-slate-50 text-center border-t border-slate-200">
     <div class="max-w-3xl mx-auto px-4">
       <h2 class="text-3xl sm:text-5xl font-black text-slate-900 mb-3 tracking-tight">
@@ -656,7 +942,7 @@
     </div>
   </section>
 
-  <!-- ZOHO-STYLE RICH FOOTER -->
+  <!-- Footer -->
   <footer class="bg-white text-slate-600 py-16 border-t border-slate-200 text-xs">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-2 md:grid-cols-5 gap-8 mb-12">
@@ -727,7 +1013,7 @@
     </div>
   </footer>
 
-  <!-- SIGN IN PORTAL MODAL -->
+  <!-- Sign in modal -->
   <div id="signin-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm transition-all" style="display: none;">
     <div class="relative w-full max-w-md bg-white rounded-2xl shadow-2xl border border-slate-100 overflow-hidden p-6 sm:p-8">
       
@@ -816,8 +1102,7 @@
     </div>
   </div>
 
-
-  <!-- QUICK CONSULTATION MODAL -->
+  <!-- Consultation modal -->
   <div id="consultation-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm transition-all" style="display: none;">
     <div class="relative w-full max-w-md bg-white rounded-2xl shadow-2xl border border-slate-100 overflow-hidden p-6 sm:p-7">
       
@@ -886,180 +1171,7 @@
     </div>
   </div>
 
-  <script>
-    // Consultation Modal Logic
-    function openConsultationModal() {
-      const modal = document.getElementById('consultation-modal');
-      const formView = document.getElementById('modal-form-view');
-      const successView = document.getElementById('modal-success-view');
-      if (modal) {
-        modal.style.display = 'flex';
-        modal.classList.remove('hidden');
-        if (formView) formView.style.display = 'block';
-        if (successView) successView.style.display = 'none';
-      }
-    }
-
-    function closeConsultationModal() {
-      const modal = document.getElementById('consultation-modal');
-      if (modal) {
-        modal.style.display = 'none';
-        modal.classList.add('hidden');
-      }
-    }
-
-    function handleModalSubmit(e) {
-      if (e) e.preventDefault();
-      const formView = document.getElementById('modal-form-view');
-      const successView = document.getElementById('modal-success-view');
-      if (formView && successView) {
-        formView.style.display = 'none';
-        successView.style.display = 'block';
-        successView.classList.remove('hidden');
-      }
-    }
-
-    // Sign In Modal Logic
-    function openSignInModal() {
-      const modal = document.getElementById('signin-modal');
-      const formView = document.getElementById('signin-form-view');
-      const successView = document.getElementById('signin-success-view');
-      if (modal) {
-        modal.style.display = 'flex';
-        modal.classList.remove('hidden');
-        if (formView) formView.style.display = 'block';
-        if (successView) successView.style.display = 'none';
-      }
-    }
-
-    function closeSignInModal() {
-      const modal = document.getElementById('signin-modal');
-      if (modal) {
-        modal.style.display = 'none';
-        modal.classList.add('hidden');
-      }
-    }
-
-    function selectSignInRole(role, btn) {
-      document.querySelectorAll('.signin-role-btn').forEach(b => {
-        b.className = 'signin-role-btn py-1.5 px-2 rounded-lg text-slate-600 hover:text-slate-900 cursor-pointer transition-all';
-      });
-      btn.className = 'signin-role-btn py-1.5 px-2 rounded-lg bg-white shadow-sm text-slate-900 font-bold cursor-pointer transition-all';
-
-      const label = document.getElementById('signin-id-label');
-      const input = document.getElementById('signin-id-input');
-      if (role === 'admin') {
-        if (label) label.innerHTML = 'Institutional Email / Admin ID <span class="text-rose-500">*</span>';
-        if (input) input.placeholder = 'e.g. principal@dps.edu.in';
-      } else if (role === 'teacher') {
-        if (label) label.innerHTML = 'Teacher ID / Registered Mobile <span class="text-rose-500">*</span>';
-        if (input) input.placeholder = 'e.g. faculty.t104@dps.edu.in';
-      } else {
-        if (label) label.innerHTML = 'Student Admission No. / Parent Mobile <span class="text-rose-500">*</span>';
-        if (input) input.placeholder = 'e.g. +91 98765 43210 or ADM-2026';
-      }
-    }
-
-    function handleSignInSubmit(e) {
-      if (e) e.preventDefault();
-      const formView = document.getElementById('signin-form-view');
-      const successView = document.getElementById('signin-success-view');
-      if (formView && successView) {
-        formView.style.display = 'none';
-        successView.style.display = 'block';
-        successView.classList.remove('hidden');
-      }
-    }
-
-    // Smooth FAQ Accordion Logic
-    function toggleFaq(btn) {
-      const item = btn.closest('.faq-item');
-      const content = item.querySelector('.faq-content');
-      const isActive = item.classList.contains('active');
-
-      document.querySelectorAll('.faq-item').forEach(other => {
-        other.classList.remove('active');
-        const otherContent = other.querySelector('.faq-content');
-        if (otherContent) {
-          otherContent.style.maxHeight = '0px';
-          otherContent.style.opacity = '0';
-        }
-      });
-
-      if (!isActive) {
-        item.classList.add('active');
-        content.style.maxHeight = content.scrollHeight + 'px';
-        content.style.opacity = '1';
-      }
-    }
-
-    // Story Slider Logic (if on home page)
-    let currentSlide = 1;
-    const totalSlides = 3;
-
-    function showSlide(index) {
-      for (let i = 1; i <= totalSlides; i++) {
-        const slide = document.getElementById(`slide-${i}`);
-        const ind = document.getElementById(`ind-${i}`);
-        if (slide) slide.classList.remove('active');
-        if (ind) ind.className = 'w-2 h-2 rounded-full bg-slate-700 inline-block transition-colors';
-      }
-
-      const activeSlide = document.getElementById(`slide-${index}`);
-      const activeInd = document.getElementById(`ind-${index}`);
-      if (activeSlide) activeSlide.classList.add('active');
-      if (activeInd) activeInd.className = 'w-2 h-2 rounded-full bg-rose-500 inline-block transition-colors';
-      currentSlide = index;
-    }
-
-    function nextSlide() {
-      let next = currentSlide + 1;
-      if (next > totalSlides) next = 1;
-      showSlide(next);
-    }
-
-    function prevSlide() {
-      let prev = currentSlide - 1;
-      if (prev < 1) prev = totalSlides;
-      showSlide(prev);
-    }
-
-    // Pricing Plan toggle for Services
-    function selectPricingPlan(planNum) {
-      const card1 = document.getElementById('pricing-card-1');
-      const card2 = document.getElementById('pricing-card-2');
-      const tag1 = document.getElementById('plan-tag-1');
-      const tag2 = document.getElementById('plan-tag-2');
-      const price1 = document.getElementById('plan-price-1');
-      const price2 = document.getElementById('plan-price-2');
-      const btn1 = document.getElementById('plan-btn-1');
-      const btn2 = document.getElementById('plan-btn-2');
-
-      if (!card1 || !card2) return;
-
-      if (planNum === 1) {
-        card1.classList.add('active-plan');
-        if (tag1) { tag1.className = 'text-xs font-bold text-blue-700 uppercase transition-colors'; tag1.innerText = 'Step 1 (Selected)'; }
-        if (price1) price1.className = 'text-2xl font-extrabold text-blue-700 my-2 transition-colors';
-        if (btn1) btn1.className = 'btn-red w-full py-2.5 text-xs text-center font-bold rounded-lg cursor-pointer';
-
-        card2.classList.remove('active-plan');
-        if (tag2) { tag2.className = 'text-xs font-bold text-slate-500 uppercase transition-colors'; tag2.innerText = 'Step 2'; }
-        if (price2) price2.className = 'text-2xl font-extrabold text-slate-900 my-2 transition-colors';
-        if (btn2) btn2.className = 'btn-secondary w-full py-2.5 text-xs text-center font-bold rounded-lg cursor-pointer';
-      } else {
-        card2.classList.add('active-plan');
-        if (tag2) { tag2.className = 'text-xs font-bold text-blue-700 uppercase transition-colors'; tag2.innerText = 'Step 2 (Selected)'; }
-        if (price2) price2.className = 'text-2xl font-extrabold text-blue-700 my-2 transition-colors';
-        if (btn2) btn2.className = 'btn-red w-full py-2.5 text-xs text-center font-bold rounded-lg cursor-pointer';
-
-        card1.classList.remove('active-plan');
-        if (tag1) { tag1.className = 'text-xs font-bold text-slate-500 uppercase transition-colors'; tag1.innerText = 'Step 1'; }
-        if (price1) price1.className = 'text-2xl font-extrabold text-slate-900 my-2 transition-colors';
-        if (btn1) btn1.className = 'btn-secondary w-full py-2.5 text-xs text-center font-bold rounded-lg cursor-pointer';
-      }
-    }
-  </script>
-
+  <!-- Scripts -->
+  <script src="script.js"></script>
 </body>
 </html>
