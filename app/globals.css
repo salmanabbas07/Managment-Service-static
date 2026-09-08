@@ -1,0 +1,101 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-brand-red: #e11d48;
+  --color-brand-red-hover: #be123c;
+  --color-brand-blue: #2563eb;
+  --color-brand-navy: #071524;
+  --color-brand-dark: #09131f;
+  --color-brand-gold: #f59e0b;
+  --color-brand-yellow: #facc15;
+  --color-brand-emerald: #10b981;
+  --bg-slate: #ffffff;
+  --card-bg: #ffffff;
+  --text-dark: #0f172a;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #ffffff;
+  color: #0f172a;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Base button styles */
+.btn-red {
+  background-color: #e11d48;
+  color: #ffffff;
+  font-weight: 700;
+  border-radius: 0.5rem;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 3px 12px rgba(225, 29, 72, 0.25);
+}
+
+.btn-red:hover {
+  background-color: #be123c;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(225, 29, 72, 0.38);
+}
+
+.btn-secondary {
+  background-color: #ffffff;
+  color: #0f172a;
+  border: 1.5px solid #cbd5e1;
+  font-weight: 700;
+  border-radius: 0.5rem;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-secondary:hover {
+  background-color: #f8fafc;
+  border-color: #94a3b8;
+  transform: translateY(-2px);
+}
+
+/* Clean card */
+.clean-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 1rem;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.clean-card:hover {
+  border-color: #cbd5e1;
+  box-shadow: 0 12px 28px -6px rgba(15, 23, 42, 0.07);
+  transform: translateY(-2px);
+}
+
+/* Floating badge keyframes */
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.float-badge {
+  animation: floatSlow 4s ease-in-out infinite;
+}
+
+.float-badge-delayed {
+  animation: floatSlow 4s 2s ease-in-out infinite;
+}

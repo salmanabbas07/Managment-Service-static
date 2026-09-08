@@ -1,0 +1,33 @@
+/* Services Page Specific Styles */
+.bg-subtle-grid {
+  background-color: #fafbfc;
+}
+
+.btn-primary {
+  background-color: #0f3b60;
+  color: #ffffff;
+  transition: all 0.2s ease;
+}
+
+.btn-primary:hover {
+  background-color: #1e4e79;
+}
+
+.pricing-card-interactive {
+  background: #ffffff;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 1rem;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+}
+
+.pricing-card-interactive:hover {
+  border-color: #cbd5e1;
+  transform: translateY(-2px);
+}
+
+.pricing-card-interactive.active-plan {
+  border-color: #2563eb;
+  box-shadow: 0 10px 30px -5px rgba(37, 99, 235, 0.15);
+  background: #ffffff;
+}
